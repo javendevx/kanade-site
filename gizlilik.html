@@ -54,16 +54,16 @@
   <li><strong>Oyun profili ve kartlar</strong>: siz silene kadar (<code>/gizlilik verilerimi-sil</code>) veya hizmet sona erene kadar.</li>
   <li><strong>Botun çıkarıldığı sunucunun verisi</strong> (şarkı havuzu ve ayarlar): bot çıkarıldıktan <strong>30 gün</strong> sonra silinir. Bu sürede bot geri eklenirse havuz kaldığı yerden devam eder.</li>
   <li><strong>Loglar</strong>: günlük dosyalar hâlinde tutulur ve <strong>14 gün</strong> sonra silinir.</li>
-  <li><strong>Yedekler</strong>: veritabanının günlük yedekleri <strong>14 gün</strong> saklanır, sonra silinir. Verilerinizi sildiğinizde bu veriler en geç 14 gün içinde yedeklerden de kalkar; yedekler yalnızca arıza durumunda geri yükleme için kullanılır.</li>
+  <li><strong>Yedekler</strong>: veritabanının günlük yedekleri sunucuda <strong>14 gün</strong>, şifreli bulut kopyası (bkz. bölüm 6) <strong>30 gün</strong> saklanır, sonra silinir. Verilerinizi sildiğinizde bu veriler en geç <strong>30 gün</strong> içinde tüm yedeklerden de kalkar; yedekler yalnızca arıza durumunda hizmeti geri yüklemek için kullanılır ve bu sürede başka bir amaçla açılmaz.</li>
   <li><strong>Takipten çıkma kaydı</strong>: yalnızca kullanıcı kimliğinizi ve tarihi içerir; verilerinizi sildikten sonra da sizi yeniden takip etmemek için siz takibi yeniden açana kadar saklanır.</li>
 </ul>
 <h2>6. Verilerin nerede işlendiği ve aktarılması</h2>
 <ul>
-  <li><strong>Barındırma (Azerbaycan):</strong> Bot, veritabanı, loglar ve yedekler veri sorumlusunun <strong>Azerbaycan</strong>'daki kendi sunucusunda çalışır ve saklanır.</li>
+  <li><strong>Barındırma (Azerbaycan):</strong> Bot, veritabanı, loglar ve yedekler veri sorumlusunun <strong>Azerbaycan</strong>'daki kendi sunucusunda çalışır ve saklanır. Yedeklerin yalnızca şifreli bir kopyası aşağıda belirtilen bulut hizmetinde tutulur.</li>
   <li><strong>Türkiye'deki kullanıcılar için yurt dışı aktarım:</strong> Türkiye'den kullandığınızda kişisel verileriniz <strong>Türkiye dışında, Azerbaycan'da işlenir</strong>; bu, KVKK m.9 anlamında yurt dışına aktarım niteliğindedir. Oyuna <strong>Katıl</strong> düğmesiyle katılarak verilerinizin bu amaçla Azerbaycan'da işlenmesine açıkça rıza vermiş olursunuz. Katılmazsanız kişiye bağlı veriniz tutulmaz (bkz. bölüm 3); rızanızı <code>/gizlilik verilerimi-sil</code> ile geri alabilirsiniz.</li>
   <li><strong>Discord:</strong> Bot, Discord'un altyapısı üzerinden çalışır. Bot ile Discord arasındaki tüm iletişim (komutlarınız, botun mesajları ve kart görselleri) Discord'un sunucularından geçer; bu veriler Discord'un kendi gizlilik politikasına tabidir ve Discord tarafından başka ülkelerde (örneğin ABD'de) işlenebilir.</li>
   <li><strong>Kapak görselleri:</strong> Kart görseli oluşturulurken kapak resmi, kaydedilmiş adresinden (çoğunlukla Spotify'ın görsel sunucuları) indirilir. Bu isteklerde kullanıcı kimliği veya başka bir kişisel veri gönderilmez.</li>
-  <li><strong>Yedeklerin bulut kopyası:</strong> Veritabanı yedeklerinin şifrelenmiş bir kopyası ileride bir bulut depolama hizmetinde tutulabilir. Bu durumda yedekler sunucudan çıkmadan önce şifrelenir, hizmet sağlayıcı içeriği okuyamaz ve bu politika güncellenerek sağlayıcı belirtilir.</li>
+  <li><strong>Yedeklerin şifreli bulut kopyası (Microsoft OneDrive):</strong> Arıza veya sunucu kaybına karşı günlük veritabanı yedeğinin bir kopyası <strong>Microsoft OneDrive</strong>'da (Microsoft Corporation) saklanır. Yedek, sunucudan çıkmadan <strong>önce</strong> veri sorumlusunun belirlediği şifrelerle şifrelenir (içerik ile dosya ve klasör adları); şifreler Microsoft'ta bulunmaz, bu nedenle Microsoft yedeğin içeriğini okuyamaz. Bu kopya Microsoft'un veri merkezlerinde, Microsoft'un belirlediği ülkelerde (örneğin ABD veya Avrupa Birliği) tutulabilir ve <strong>30 gün</strong> sonra silinir. Türkiye'den kullananlar için bu da yurt dışına aktarım niteliğindedir ve yukarıdaki açık rıza kapsamındadır.</li>
 </ul>
 <p>Verileriniz satılmaz, reklam amacıyla kullanılmaz ve bu bölümde sayılanlar dışında kimseyle paylaşılmaz. Yasal bir zorunluluk olması hâlinde yetkili makamlarla paylaşılabilir.</p>
 <h2>7. Verileriniz üzerindeki kontroller</h2>
@@ -76,7 +76,7 @@
 </ul>
 <p>Discord'da Spotify'ı durum olarak paylaşmayı kapatırsanız bot dinlemelerinizi hiç göremez.</p>
 <h2>8. Güvenlik</h2>
-<p>Sunucuya yalnızca veri sorumlusu erişebilir; bağlantı şifre yerine anahtarla yapılır. Bot ayrı ve yetkisi kısıtlı bir sistem kullanıcısıyla çalışır, bot token'ı gibi gizli bilgiler yalnızca bu kullanıcının okuyabildiği bir dosyada tutulur. Veritabanı her gün yedeklenir ve yedeklerin bütünlüğü kontrol edilir.</p>
+<p>Sunucuya yalnızca veri sorumlusu erişebilir; bağlantı şifre yerine anahtarla yapılır. Bot ayrı ve yetkisi kısıtlı bir sistem kullanıcısıyla çalışır, bot token'ı gibi gizli bilgiler yalnızca bu kullanıcının okuyabildiği bir dosyada tutulur. Veritabanı her gün yedeklenir ve yedeklerin bütünlüğü kontrol edilir; sunucu dışına çıkan tek kopya, sunucuda şifrelenmiş bulut yedeğidir.</p>
 <h2>9. Discord ve Spotify ile ilişki</h2>
 <p>Kanade bağımsız bir projedir. <strong>Discord Inc. veya Spotify AB ile bağlantılı değildir</strong>, onlar tarafından desteklenmez veya onaylanmaz. Discord ve Spotify'ın sizin hakkınızda işlediği veriler onların kendi gizlilik politikalarına tabidir; bu politika yalnızca Kanade'nin işlediği verileri kapsar.</p>
 <h2>10. Çocuklar</h2>

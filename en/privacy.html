@@ -54,16 +54,16 @@
   <li><strong>Game profile and cards</strong>: until you delete them (<code>/privacy delete-my-data</code>) or the service ends.</li>
   <li><strong>Data of a server the bot was removed from</strong> (song pool and settings): deleted <strong>30 days</strong> after removal. If the bot is re-added within that time, the pool continues where it left off.</li>
   <li><strong>Logs</strong>: kept as daily files and deleted after <strong>14 days</strong>.</li>
-  <li><strong>Backups</strong>: daily database backups are kept for <strong>14 days</strong> and then deleted. When you delete your data, it disappears from backups within 14 days at the latest; backups are only used to restore the service after a failure.</li>
+  <li><strong>Backups</strong>: daily database backups are kept on the server for <strong>14 days</strong> and the encrypted cloud copy (see section 6) for <strong>30 days</strong>, and are then deleted. When you delete your data, it disappears from all backups within <strong>30 days</strong> at the latest; backups are only used to restore the service after a failure and are not opened for any other purpose during that time.</li>
   <li><strong>Opt-out record</strong>: contains only your user ID and a date; kept after you delete your data so that you are not tracked again, until you turn tracking back on.</li>
 </ul>
 <h2>6. Where data is processed and transfers</h2>
 <ul>
-  <li><strong>Hosting (Azerbaijan):</strong> The bot, database, logs and backups run and are stored on the data controller's own server in <strong>Azerbaijan</strong>.</li>
+  <li><strong>Hosting (Azerbaijan):</strong> The bot, database, logs and backups run and are stored on the data controller's own server in <strong>Azerbaijan</strong>. Only an encrypted copy of the backups is kept with the cloud service named below.</li>
   <li><strong>Cross-border transfer for users in Türkiye:</strong> When you use the bot from Türkiye, your personal data is <strong>processed outside Türkiye, in Azerbaijan</strong>; this constitutes a transfer abroad within the meaning of KVKK art. 9. By joining the game with the <strong>Join</strong> button you explicitly consent to your data being processed in Azerbaijan for this purpose. If you do not join, no personal data is kept about you (see section 3); you can withdraw consent with <code>/privacy delete-my-data</code>.</li>
   <li><strong>Discord:</strong> The bot runs on Discord's infrastructure. All communication between the bot and Discord (your commands, the bot's messages and card images) passes through Discord's servers; this data is subject to Discord's own privacy policy and may be processed by Discord in other countries (for example, the United States).</li>
   <li><strong>Cover images:</strong> When a card image is rendered, the cover is downloaded from its stored URL (usually Spotify's image servers). No user ID or other personal data is sent in these requests.</li>
-  <li><strong>Cloud copy of backups:</strong> An encrypted copy of database backups may in the future be kept with a cloud storage provider. In that case backups are encrypted before leaving the server, the provider cannot read their content, and this policy will be updated to name the provider.</li>
+  <li><strong>Encrypted cloud copy of backups (Microsoft OneDrive):</strong> To protect against failure or loss of the server, a copy of the daily database backup is stored in <strong>Microsoft OneDrive</strong> (Microsoft Corporation). The backup is encrypted <strong>before</strong> it leaves the server with passwords set by the data controller (content as well as file and folder names); the passwords are not held by Microsoft, so Microsoft cannot read the backup's content. This copy may be kept in Microsoft's data centres in countries chosen by Microsoft (for example, the United States or the European Union) and is deleted after <strong>30 days</strong>. For users in Türkiye this is also a transfer abroad and is covered by the explicit consent described above.</li>
 </ul>
 <p>Your data is not sold, not used for advertising, and not shared with anyone other than those listed in this section. It may be shared with competent authorities where required by law.</p>
 <h2>7. Your controls</h2>
@@ -76,7 +76,7 @@
 </ul>
 <p>If you stop sharing Spotify as your Discord status, the bot cannot see your listening at all.</p>
 <h2>8. Security</h2>
-<p>Only the data controller can access the server, and access uses keys rather than passwords. The bot runs as a separate system user with restricted permissions; secrets such as the bot token are kept in a file only that user can read. The database is backed up daily and backup integrity is checked.</p>
+<p>Only the data controller can access the server, and access uses keys rather than passwords. The bot runs as a separate system user with restricted permissions; secrets such as the bot token are kept in a file only that user can read. The database is backed up daily and backup integrity is checked; the only copy that leaves the server is the cloud backup, encrypted on the server.</p>
 <h2>9. Relationship with Discord and Spotify</h2>
 <p>Kanade is an independent project. It is <strong>not affiliated with, endorsed or sponsored by Discord Inc. or Spotify AB</strong>. Data that Discord and Spotify process about you is subject to their own privacy policies; this policy covers only data processed by Kanade.</p>
 <h2>10. Children</h2>
